@@ -1,7 +1,7 @@
-A small pcb for the MCP2111 chip
+A small pcb for the MCP2221 chip
 ================================
 
-The MCP2111 chip is an USB to GPIO bridge and brings GPIOs (including I2C) to any computer.
+The MCP2221 chip is an USB to GPIO bridge and brings GPIOs (including I2C) to any computer.
 
 This github-repository contains a Kicad-project for the chip.
 
