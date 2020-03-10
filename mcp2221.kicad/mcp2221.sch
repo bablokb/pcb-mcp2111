@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "MCP2221 Breakout"
-Date "2020-03-06"
-Rev "2"
+Date "2020-03-10"
+Rev "3"
 Comp "https://github.com/bablokb/pcb-mcp2221"
 Comment1 ""
 Comment2 ""
@@ -40,12 +40,12 @@ $EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 5E4BC7DA
-P 2300 2500
-F 0 "#PWR0102" H 2300 2250 50  0001 C CNN
-F 1 "GND" H 2305 2327 50  0000 C CNN
-F 2 "" H 2300 2500 50  0001 C CNN
-F 3 "" H 2300 2500 50  0001 C CNN
-	1    2300 2500
+P 3050 2600
+F 0 "#PWR0102" H 3050 2350 50  0001 C CNN
+F 1 "GND" H 3055 2427 50  0000 C CNN
+F 2 "" H 3050 2600 50  0001 C CNN
+F 3 "" H 3050 2600 50  0001 C CNN
+	1    3050 2600
 	1    0    0    -1  
 $EndComp
 Text Label 5500 1800 0    50   ~ 0
@@ -357,31 +357,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 2600 4200 2800
 Connection ~ 4200 2800
-$Comp
-L Connector_Generic:Conn_01x04 USB1
-U 1 1 5E611DD7
-P 2100 2400
-F 0 "USB1" H 2018 1975 50  0000 C CNN
-F 1 "Conn_01x04" H 2018 2066 50  0000 C CNN
-F 2 "" H 2100 2400 50  0001 C CNN
-F 3 "~" H 2100 2400 50  0001 C CNN
-	1    2100 2400
-	-1   0    0    1   
-$EndComp
-Text Notes 2000 2500 2    50   ~ 0
-VBUS\nD+\nD-\nGND
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5E615FD4
-P 2300 2500
-F 0 "#FLG0102" H 2300 2575 50  0001 C CNN
-F 1 "PWR_FLAG" V 2300 2627 50  0000 L CNN
-F 2 "" H 2300 2500 50  0001 C CNN
-F 3 "~" H 2300 2500 50  0001 C CNN
-	1    2300 2500
-	0    1    1    0   
-$EndComp
-Connection ~ 2300 2500
 Wire Wire Line
 	2300 2200 2300 1800
 Wire Wire Line
@@ -390,7 +365,6 @@ Wire Wire Line
 	2300 2200 3500 2200
 Wire Wire Line
 	3500 2200 3500 2100
-Connection ~ 2300 2200
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5E61A706
@@ -425,17 +399,6 @@ F 3 "~" H 3700 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4000 2450 3850 2450
-$Comp
-L power:GND #PWR0106
-U 1 1 5E625316
-P 3550 2450
-F 0 "#PWR0106" H 3550 2200 50  0001 C CNN
-F 1 "GND" V 3555 2322 50  0000 R CNN
-F 2 "" H 3550 2450 50  0001 C CNN
-F 3 "" H 3550 2450 50  0001 C CNN
-	1    3550 2450
-	0    1    1    0   
-$EndComp
 Connection ~ 3850 1450
 Wire Wire Line
 	3850 1450 3700 1450
@@ -450,5 +413,41 @@ Wire Wire Line
 Wire Wire Line
 	4200 2800 4200 2900
 Text Label 7250 1950 0    50   ~ 0
+~RST~
+$Comp
+L User:Micro-USB_Breakout USB1
+U 1 1 5E68A411
+P 2100 2400
+F 0 "USB1" H 2100 2750 50  0000 C CNN
+F 1 "Micro-USB_Breakout" H 2100 2850 50  0000 C CNN
+F 2 "" H 2100 2400 50  0001 C CNN
+F 3 "~" H 2100 2400 50  0001 C CNN
+	1    2100 2400
+	-1   0    0    1   
+$EndComp
+Connection ~ 2300 2200
+NoConn ~ 2300 2500
+Wire Wire Line
+	2300 2600 2750 2600
+Wire Wire Line
+	3550 2450 3050 2450
+Wire Wire Line
+	3050 2450 3050 2600
+Connection ~ 3050 2600
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E691293
+P 2750 2600
+F 0 "#FLG0102" H 2750 2675 50  0001 C CNN
+F 1 "PWR_FLAG" H 2550 2550 50  0000 L CNN
+F 2 "" H 2750 2600 50  0001 C CNN
+F 3 "~" H 2750 2600 50  0001 C CNN
+	1    2750 2600
+	-1   0    0    1   
+$EndComp
+Connection ~ 2750 2600
+Wire Wire Line
+	2750 2600 3050 2600
+Text Label 5500 2300 0    50   ~ 0
 ~RST~
 $EndSCHEMATC
