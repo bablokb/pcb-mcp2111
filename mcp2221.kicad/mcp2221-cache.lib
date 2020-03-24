@@ -238,7 +238,7 @@ F2 "user:Micro-USB_Breakout" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  *USB*
- *breakout*
+ *Breakout*
 $ENDFPLIST
 DRAW
 T 0 50 0 50 0 0 0 D+ Normal 0 L C
