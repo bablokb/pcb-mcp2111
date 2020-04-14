@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "MCP2221 Breakout"
-Date "2020-04-09"
-Rev "6"
+Date "2020-04-14"
+Rev "7"
 Comp "https://github.com/bablokb/pcb-mcp2221"
 Comment1 ""
 Comment2 ""
@@ -513,11 +513,9 @@ $EndComp
 Wire Wire Line
 	8550 3050 8550 3400
 Wire Wire Line
-	6900 2700 8550 2700
+	6900 2700 7900 2700
 Wire Wire Line
 	8550 2700 8550 2950
-Wire Wire Line
-	7000 2500 7950 2500
 Wire Wire Line
 	8800 2500 8800 2950
 Text Label 7850 1700 3    50   ~ 0
@@ -558,32 +556,29 @@ Wire Wire Line
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5E6B4B53
-P 8150 2250
-F 0 "SW1" H 8150 2535 50  0000 C CNN
-F 1 "SW_Push" H 8150 2444 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 8150 2450 50  0001 C CNN
-F 3 "~" H 8150 2450 50  0001 C CNN
-	1    8150 2250
+P 8900 2250
+F 0 "SW1" H 8900 2535 50  0000 C CNN
+F 1 "SW_Push" H 8900 2444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 8900 2450 50  0001 C CNN
+F 3 "~" H 8900 2450 50  0001 C CNN
+	1    8900 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7950 2250 7950 2500
-Connection ~ 7950 2500
-Wire Wire Line
-	7950 2500 8800 2500
+	8700 2250 8700 2500
 $Comp
 L power:GND #PWR09
 U 1 1 5E6B663C
-P 8550 2250
-F 0 "#PWR09" H 8550 2000 50  0001 C CNN
-F 1 "GND" H 8555 2077 50  0000 C CNN
-F 2 "" H 8550 2250 50  0001 C CNN
-F 3 "" H 8550 2250 50  0001 C CNN
-	1    8550 2250
+P 9300 2250
+F 0 "#PWR09" H 9300 2000 50  0001 C CNN
+F 1 "GND" H 9305 2077 50  0000 C CNN
+F 2 "" H 9300 2250 50  0001 C CNN
+F 3 "" H 9300 2250 50  0001 C CNN
+	1    9300 2250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8350 2250 8550 2250
+	9100 2250 9300 2250
 $Comp
 L Connector:Conn_01x06_Male J6
 U 1 1 5E8993DF
@@ -636,4 +631,38 @@ Connection ~ 3700 1450
 Connection ~ 3850 1450
 Wire Wire Line
 	3850 1450 3700 1450
+Connection ~ 8700 2500
+Wire Wire Line
+	8700 2500 8800 2500
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5E9641FD
+P 8100 2250
+F 0 "SW2" H 8100 2535 50  0000 C CNN
+F 1 "SW_Push" H 8100 2444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 8100 2450 50  0001 C CNN
+F 3 "~" H 8100 2450 50  0001 C CNN
+	1    8100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E964208
+P 8500 2250
+F 0 "#PWR0101" H 8500 2000 50  0001 C CNN
+F 1 "GND" H 8505 2077 50  0000 C CNN
+F 2 "" H 8500 2250 50  0001 C CNN
+F 3 "" H 8500 2250 50  0001 C CNN
+	1    8500 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8300 2250 8500 2250
+Wire Wire Line
+	7000 2500 8700 2500
+Wire Wire Line
+	7900 2250 7900 2700
+Connection ~ 7900 2700
+Wire Wire Line
+	7900 2700 8550 2700
 $EndSCHEMATC
