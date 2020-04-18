@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "MCP2221 Breakout"
-Date "2020-04-14"
-Rev "7"
+Date "2020-04-17"
+Rev "8"
 Comp "https://github.com/bablokb/pcb-mcp2221"
 Comment1 ""
 Comment2 ""
