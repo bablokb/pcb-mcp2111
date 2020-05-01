@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "MCP2221 Breakout"
-Date "2020-04-30"
-Rev "9"
+Date "2020-05-01"
+Rev "10"
 Comp "https://github.com/bablokb/pcb-mcp2221"
 Comment1 ""
 Comment2 ""
@@ -53,9 +53,9 @@ USB-D-
 Text Label 5500 1700 0    50   ~ 0
 USB-D+
 Text Label 2300 2400 0    50   ~ 0
-USB-D-
-Text Label 2300 2300 0    50   ~ 0
 USB-D+
+Text Label 2300 2300 0    50   ~ 0
+USB-D-
 Text Label 4300 1700 2    50   ~ 0
 GP3
 Text Label 4300 1800 2    50   ~ 0
